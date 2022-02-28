@@ -3,9 +3,15 @@ import Link from 'next/link';
 import CheckLogoText from '../../assets/icons/logotextblack.svg';
 import MobileMenu from './mobile-menu';
 import LoginGroup from './login/login-group';
+import MainGroup from './main/main-group';
 import LoginMobileMenu from './login/login-mobile-menu';
+import { HeaderType } from '../../hooks/useHeaderType';
 
-function Header(): JSX.Element {
+interface Props {
+  headerType: HeaderType,
+}
+
+function Header({ headerType }: Props): JSX.Element {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
@@ -16,8 +22,12 @@ function Header(): JSX.Element {
             <CheckLogoText className="h-6 w-auto cursor-pointer" />
           </a>
         </Link>
-        <nav>
-          <LoginGroup openMenu={openMenu} setOpenMenu={setOpenMenu} />
+        <nav className="w-full">
+          {
+            headerType === 'login'
+              ? <LoginGroup openMenu={openMenu} setOpenMenu={setOpenMenu} />
+              : <MainGroup openMenu={openMenu} setOpenMenu={setOpenMenu} />
+          }
         </nav>
       </header>
       <MobileMenu show={openMenu} className="block md:hidden">

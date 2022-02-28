@@ -9,7 +9,7 @@ interface Props {
 
 function LoginGroup({ openMenu, setOpenMenu }: Props) {
   return (
-    <ul className="flex items-center space-x-4">
+    <ul className="flex items-center space-x-4 justify-end">
       <li className="text-steel-500 hidden md:block">
         <Link href="/">
           <a>Contact</a>
