@@ -4,7 +4,7 @@ import Card from '../components/card';
 import BenefitsList from '../components/benefits-list';
 import CentredLayout from '../components/layout/centred';
 import Input from '../components/input';
-import Button from '../components/button/LinkButton';
+import Button from '../components/button/link-button';
 import JoinItem, { IconSet } from '../components/join/join-item';
 import ModalMessage from '../components/modal-message';
 

@@ -1,18 +1,25 @@
+// @ts-ignore
+import { UilSearch } from '@iconscout/react-unicons';
+import { Dispatch, SetStateAction } from 'react';
+
 interface Props {
+  handleClick: Dispatch<SetStateAction<boolean>>,
   className?: string,
 }
 
 function SearchInput({
   className,
+  handleClick,
 }: Props): JSX.Element {
   return (
-    <label className={` transition-all ease-in-out delay-150 mx-2 ${className || ''}`} htmlFor="search">
+    <label className="relative flex justify-end items-center w-full" htmlFor="search">
       <input
-        className="w-full py-2 border-b-2 border-blue-500 outline-none focus:border-gradient-default placeholder:p-4"
-        placeholder="search..."
-        type="text"
+        className="animate-expand py-2 rounded border-2 outline-none focus:border-gradient-default py-2 px-4 shadow-button max-w-[400px]"
+        placeholder="Search"
+        type="search"
         name="search"
       />
+      <UilSearch size={20} className="absolute right-2" onClick={() => handleClick(false)} />
     </label>
   );
 }

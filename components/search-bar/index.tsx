@@ -8,9 +8,12 @@ function SearchBar() {
   const [searchString, setSearchString] = useState('');
 
   return (
-    <div className="flex items-center w-full justify-end">
-      <Search className={`${expanded ? 'w-0' : 'w-full'}`} />
-      <UilSearch size={20} onClick={() => setExpanded(!expanded)} />
+    <div className="hidden md:flex items-center w-full justify-end">
+      {
+        expanded
+          ? <Search handleClick={setExpanded} />
+          : <UilSearch size={20} onClick={() => setExpanded(!expanded)} className="mr-2" />
+      }
     </div>
   );
 }

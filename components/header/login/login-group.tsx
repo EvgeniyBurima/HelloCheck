@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Button from '../../button/LinkButton';
+import Button from '../../button/link-button';
 import BurgerMenu from '../burger';
 
 interface Props {

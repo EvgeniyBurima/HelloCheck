@@ -19,7 +19,7 @@ function Layout({ children, headerType }: LayoutProps): JSX.Element {
 
       <Header headerType={headerType} />
 
-      <main className="row-auto mt-[1px] flex flex-col justify-center items-center">
+      <main className="row-auto border-t border-background flex flex-col justify-center items-center">
         { children }
       </main>
     </div>

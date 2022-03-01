@@ -2,7 +2,7 @@ import Label from '../label';
 
 function Footer() {
   return (
-    <div className="hidden md:flex justify-between mt-[1px] bg-white w-full px-12 py-2 text-steel-300 text-xxs">
+    <div className="hidden md:flex justify-between border-t border-background bg-white w-full px-12 py-2 text-steel-300 text-xxs">
       <span>© 2022 LSB Software, Inc. All rights reserved.</span>
       <div>
         <Label text="Operator ID: 12050" disabled />

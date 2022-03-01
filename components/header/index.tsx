@@ -24,7 +24,7 @@ function Header({ headerType }: Props): JSX.Element {
         </Link>
         <nav className="w-full">
           {
-            headerType === 'login'
+            headerType.type === 'login'
               ? <LoginGroup openMenu={openMenu} setOpenMenu={setOpenMenu} />
               : <MainGroup openMenu={openMenu} setOpenMenu={setOpenMenu} />
           }

@@ -2,7 +2,7 @@ import React from 'react';
 import Gradient from './gradient';
 
 interface Props {
-  size: number,
+  size: string,
 }
 
 function Analysis({ size }: Props) {

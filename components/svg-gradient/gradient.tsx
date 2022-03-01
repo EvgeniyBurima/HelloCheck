@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 interface GradientProps {
-  size?: number,
+  size?: string,
   rotation?: string,
   startColor?: string,
   endColor?: string,
@@ -9,7 +9,7 @@ interface GradientProps {
 }
 
 function Gradient({
-  size = 24,
+  size = '24',
   rotation = 'rotate(115.16)',
   startColor = 'rgb(73, 102, 242)',
   endColor = 'rgb(151, 46, 234)',

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Card from '../components/card';
 import Index from '../components/modal-message';
 import Input from '../components/input';
-import Button from '../components/button/LinkButton';
+import Button from '../components/button/link-button';
 import StoreButtons from '../components/store-buttons';
 import CentredLayout from '../components/layout/centred';
 

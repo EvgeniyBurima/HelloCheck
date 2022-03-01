@@ -50,7 +50,7 @@ function Label({
   shade = 'light',
 }: Props) {
   return (
-    <span className={`${getColor(color, disabled, shade)} ${size === 'small' ? 'h-4 text-xxs' : 'h-[21px] text-sm'} py-0.5 px-2  rounded`}>
+    <span className={`${getColor(color, disabled, shade)} ${size === 'small' ? 'h-4 text-xxs text-label-small' : 'h-[21px] text-label-large'} py-0.5 px-2  rounded`}>
       {text}
     </span>
   );

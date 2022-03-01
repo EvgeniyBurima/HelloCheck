@@ -1,5 +1,5 @@
 import React from 'react';
-import UpDownArrows from '../../up-down-arrows';
+import UpDownArrows from '../up-down-arrows';
 
 interface Props{
   text: string,

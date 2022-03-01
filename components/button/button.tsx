@@ -1,20 +1,32 @@
-// @ts-ignore
-import { UilPlus, UilAngleDown } from '@iconscout/react-unicons';
+import {
+  UilPlus,
+  UilAngleDown,
+  UilArchive,
+  UilTrashAlt,
+  UilCornerUpLeftAlt,
+  // @ts-ignore
+} from '@iconscout/react-unicons';
 
 type ButtonColor = 'gradient' | 'blue' | 'white';
-type IconType = 'chevron' | 'plus';
+type IconType = 'chevron' | 'plus' | 'archive' | 'delete' | 'back';
+type IconColor = 'red';
 
 interface Props {
   text?: string,
   color?: ButtonColor,
   className?: string,
   icon?: IconType,
+  iconColor?: IconColor,
 }
 
 interface IGetColor {
   backGround: string,
   fontColor: string,
 }
+
+const iconColors = {
+  red: 'text-red-500',
+};
 
 const getColor = (color: ButtonColor): IGetColor => {
   let backGround = 'bg-blue-500';
@@ -31,7 +43,7 @@ const getColor = (color: ButtonColor): IGetColor => {
   };
 };
 
-const getIcon = (iconName: IconType): JSX.Element | null => {
+const getIcon = (iconName: IconType, iconColor: IconColor | undefined): JSX.Element | null => {
   let Icon;
   switch (iconName) {
     case 'chevron':
@@ -40,9 +52,18 @@ const getIcon = (iconName: IconType): JSX.Element | null => {
     case 'plus':
       Icon = UilPlus;
       break;
+    case 'archive':
+      Icon = UilArchive;
+      break;
+    case 'delete':
+      Icon = UilTrashAlt;
+      break;
+    case 'back':
+      Icon = UilCornerUpLeftAlt;
+      break;
     default: Icon = UilAngleDown;
   }
-  return <Icon size={16} />;
+  return <Icon size={16} className={iconColor ? iconColors[iconColor] : ''} />;
 };
 
 function Button({
@@ -50,6 +71,7 @@ function Button({
   text = '',
   className,
   icon,
+  iconColor,
 }: Props): JSX.Element {
   const { backGround, fontColor } = getColor(color);
   const classNames = `capitalize rounded-lg px-3 py-1 shadow-button font-normal hover:shadow-button-hover ${backGround} ${fontColor} ${className}`;
@@ -60,12 +82,17 @@ function Button({
     >
       {
         icon
-          ? <span className="w-[28px] flex justify-center">{getIcon(icon)}</span>
+          ? <span className="w-[28px] flex justify-center">{getIcon(icon, iconColor)}</span>
           : ''
       }
-      <span className="pr-3">
-        {text}
-      </span>
+      {
+        text
+        && (
+          <span className="pr-3">
+            {text}
+          </span>
+        )
+      }
     </button>
   );
 }

@@ -11,7 +11,8 @@
       { "namedComponents": "function-declaration" }
     ],
     "react/prop-types": "off", // Since we do not use prop-types
-    "react/require-default-props": "off" // Since we do not use prop-types
+    "react/require-default-props": "off", // Since we do not use prop-types
+    "linebreak-style": ["error", "windows"]
   },
   "parserOptions": {
     "project": "./tsconfig.json"
