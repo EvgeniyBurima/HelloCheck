@@ -8,11 +8,11 @@ interface Props {
 }
 
 function SearchInput({
-  className,
   handleClick,
+  className = '',
 }: Props): JSX.Element {
   return (
-    <label className="relative flex justify-end items-center w-full" htmlFor="search">
+    <label className={`mr-2 relative flex justify-end items-center w-full ${className}`} htmlFor="search">
       <input
         className="animate-expand py-2 rounded border-2 outline-none focus:border-gradient-default py-2 px-4 shadow-button max-w-[400px]"
         placeholder="Search"

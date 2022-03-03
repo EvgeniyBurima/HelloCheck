@@ -12,7 +12,7 @@ function SearchBar() {
       {
         expanded
           ? <Search handleClick={setExpanded} />
-          : <UilSearch size={20} onClick={() => setExpanded(!expanded)} className="mr-2" />
+          : <UilSearch size={20} onClick={() => setExpanded(!expanded)} className="mr-4" />
       }
     </div>
   );

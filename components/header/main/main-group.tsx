@@ -11,7 +11,7 @@ interface Props {
 function LoginGroup({ openMenu, setOpenMenu }: Props) {
   return (
     <div className="flex w-full space-x-2 justify-end md:justify-between">
-      <div className="hidden md:flex items-center space-x-4">
+      <div className="ml-4 hidden md:flex items-center space-x-4 text-meta font-medium">
         <Link href="/clients">
           <a className="text-steel-500">Clients</a>
         </Link>
