@@ -33,7 +33,7 @@ function BenefitsList() {
         }
       </ul>
 
-      <StoreButtons className="mt-4 self-start ml-10" />
+      <StoreButtons className="mt-3 self-start ml-10" />
     </>
   );
 }

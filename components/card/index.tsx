@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react';
 interface Props {
   children: ReactNode,
   className?: string;
+  footerSize?: 'big' | 'small';
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -18,7 +19,7 @@ function Footer(props: any): JSX.Element | null {
   return null;
 }
 
-function Card({ children, className }: Props): JSX.Element {
+function Card({ children, className, footerSize }: Props): JSX.Element {
   const checkType = (cardPart: 'Header' | 'Body' | 'Footer') => (child: ReactNode) => {
     if (!child) return false;
     if (typeof child === 'object' && 'type' in child) {
@@ -50,7 +51,7 @@ function Card({ children, className }: Props): JSX.Element {
       { head ? getChildren(head) : '' }
       { body ? getChildren(body) : ''}
       { footer
-        ? <div className="px-6 py-4 bg-white mt-[2px]">{getChildren(footer)}</div>
+        ? <div className={`px-6 md:px-8 ${footerSize === 'big' ? 'py-8' : 'py-4'} bg-white border-background border-t`}>{getChildren(footer)}</div>
         : '' }
     </div>
   );

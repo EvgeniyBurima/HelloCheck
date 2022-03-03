@@ -38,12 +38,12 @@ function Home(): JSX.Element {
           </CentredLayout>
         </div>
         <CentredLayout className="w-full p-4 md:p-4 lg:p-0 order-first md:order-last">
-          <Card>
+          <Card footerSize="big">
             <Card.Body>
               <div className="bg-white">
                 <div className="p-8 flex flex-col items-center">
-                  <h1 className="mb-4 text-3xl font-medium">Join 10,000+ other professionals putting their business in Check</h1>
-                  <ul className="self-start">
+                  <h3 className="mb-4 text-h3 font-medium leading-[38px]">Join 10,000+ other professionals putting their business in Check</h3>
+                  <ul className="self-start space-y-2">
                     {
                       joinItems
                         .map(({ icon, description }) => (
@@ -60,21 +60,21 @@ function Home(): JSX.Element {
             </Card.Body>
             <Card.Footer>
               <div className="flex flex-col">
-                <ModalMessage
-                  text="We just sent a verification code to (890) 123-4567. Please enter the code below and confirm!"
-                  color="green"
-                  icon="shield"
-                  className="mb-4"
-                />
+                {/*<ModalMessage*/}
+                {/*  text="We just sent a verification code to (890) 123-4567. Please enter the code below and confirm!"*/}
+                {/*  color="green"*/}
+                {/*  icon="shield"*/}
+                {/*  className="mb-4"*/}
+                {/*/>*/}
                 <Input
                   inputType="tel"
                   name="phone"
                   icon="phone"
                   placeholderText="Phone Number"
                 />
-                <Button text="Sign Up" color="gradient" className="mt-2 mb-4 w-[128px]" href="/signUp" />
+                <Button text="Sign Up" color="gradient" className="mt-2 mb-4 w-[120px]" href="/signUp" />
                 <span className="text-steel-400">
-                  Don’t have an account?&nbsp;
+                  Already have an account?&nbsp;
                   <Link href="/login">
                     <a className="font-bold text-blue-500">Log In</a>
                   </Link>

@@ -25,12 +25,12 @@ function Login(): JSX.Element {
           <Card.Body>
             <div className="bg-white">
               <div className="p-8 flex flex-col items-center">
-                <h3 className="text-h3 font-medium">Log In to Check</h3>
+                <h3 className="text-h3 font-medium leading-[1.1879]">Log In to Check</h3>
                 <ModalMessage
                   text="We just sent a verification code to (890) 123-4567. Please enter the code below and confirm!"
                   color="green"
                   icon="shield"
-                  className="mt-5"
+                  className="mt-4"
                 />
                 <Input
                   inputType="tel"

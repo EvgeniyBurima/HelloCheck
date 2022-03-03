@@ -29,7 +29,7 @@ const getIcon = (icon: Icon): JSX.Element | string => {
   }
   if (Component) {
     return (
-      <span className="absolute left-0 top-0 items-center px-[9px] py-3">
+      <span className="absolute left-0 top-0 items-center px-[8px] py-2">
         <Component size="18" />
       </span>
     );
@@ -48,7 +48,7 @@ function Input({
     <label className={`relative w-full ${className || ''}`} htmlFor={name}>
       { icon && getIcon(icon)}
       <input
-        className="placeholder:text-meta placeholder:text-steel-200 block bg-white w-full border border-slate-300 rounded-md py-2 pl-8 pr-3"
+        className="placeholder:text-meta placeholder:text-steel-200 block bg-white w-full border border-slate-300 rounded-md py-[7px] pl-8 pr-3"
         placeholder={placeholderText}
         type={inputType}
         name={name}

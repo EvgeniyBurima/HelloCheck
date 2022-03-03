@@ -11,7 +11,7 @@ interface Props {
 }
 
 const getIcon = (iconName: IconSet) => {
-  const size = 14;
+  const size = '16';
   let Component;
   switch (iconName) {
     case 'analysis':
@@ -35,8 +35,8 @@ const getIcon = (iconName: IconSet) => {
 function JoinItem({ icon, description }: Props) {
   return (
     <li className="flex text-sm">
-      <span className="mr-4">{getIcon(icon)}</span>
-      <span>{description}</span>
+      <span className="mr-2 pt-[2px]">{getIcon(icon)}</span>
+      <span className="text-meta">{description}</span>
     </li>
   );
 }

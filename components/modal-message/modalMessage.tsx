@@ -66,7 +66,7 @@ function ModalMessage({
   return (
     <div className={`rounded text-steel-500 flex px-4 py-2 ${getBgColorClass(color)} ${className || ''}`}>
       { icon && getIcon(icon, color) }
-      <div className="text-modal">
+      <div className="text-meta">
         { text }
       </div>
     </div>

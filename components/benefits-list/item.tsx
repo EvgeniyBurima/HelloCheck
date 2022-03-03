@@ -8,12 +8,12 @@ interface BenefitItemProps {
 
 function BenefitItem({ header, description }: BenefitItemProps): JSX.Element {
   return (
-    <li className="flex">
-      <div className="mr-3">
-        <Check />
+    <li className="flex h-[75px]">
+      <div className="mr-2">
+        <Check size="32" />
       </div>
       <div>
-        <h4 className="font-medium text-2xl">{header || ''}</h4>
+        <h4 className="font-medium text-h4 mb-1.5">{header || ''}</h4>
         <p className="text-sm">{description || ''}</p>
       </div>
     </li>
