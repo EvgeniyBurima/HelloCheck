@@ -20,7 +20,12 @@ function AngleSpan({ value, handleClick }: Props) {
   };
 
   return (
-    <span onClick={handle} className="flex items-center">
+    <span
+      onClick={handle}
+      className="flex items-center"
+      role="button"
+      tabIndex={0}
+    >
       <span className="mr-2">{value}</span>
       {expanded ? <UilAngleDown size={size} /> : <UilAngleRight size={size} />}
     </span>

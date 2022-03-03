@@ -1,6 +1,16 @@
 import React from 'react';
+import {
+  UilAnalysis,
+  UilCalendarAlt,
+  UilRepeat,
+  UilEnvelope,
+  UilTelegramAlt,
+  UilUserCircle,
+  UilPhone,
+  UilTrashAlt,
+  UilArchive,
 // @ts-ignore
-import { UilAnalysis, UilCalendarAlt, UilRepeat, UilEnvelope, UilTelegramAlt, UilUserCircle, UilPhone, UilTrashAlt, UilArchive } from '@iconscout/react-unicons';
+} from '@iconscout/react-unicons';
 import GroupItem from '../group-item';
 
 type Icon = 'repeat' | 'analysis' | 'calendar' | 'envelope' | 'telegram' | 'user-circle' | 'phone' | 'archive' | 'trash';

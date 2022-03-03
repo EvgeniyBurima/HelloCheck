@@ -47,7 +47,7 @@ function GroupItem({
   const right = childrenArray.find(rightChecker);
 
   return (
-    <div className={`p-2 flex justify-between items-center ${shadow ? 'shadow-button' : ''} ${className || ''} ${ghost ? 'bg-transparent' : 'bg-white hover:bg-steel-50' }`}>
+    <div className={`p-2 flex justify-between items-center ${shadow ? 'shadow-button' : ''} ${className || ''} ${ghost ? 'bg-transparent' : 'bg-white hover:bg-steel-50'}`}>
       { left ? getChildren(left) : '' }
       { right ? getChildren(right) : ''}
     </div>

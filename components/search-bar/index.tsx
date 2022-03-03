@@ -5,7 +5,6 @@ import Search from '../input/search';
 
 function SearchBar() {
   const [expanded, setExpanded] = useState(false);
-  const [searchString, setSearchString] = useState('');
 
   return (
     <div className="hidden md:flex items-center w-full justify-end">

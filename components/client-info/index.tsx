@@ -3,7 +3,7 @@ import React from 'react';
 import { UilDollarAlt } from '@iconscout/react-unicons';
 import Button from '../button/button';
 import GroupItem from '../group-item';
-import MoneySpan from "../span/money-span";
+import MoneySpan from '../span/money-span';
 
 interface Props{
   id: number,

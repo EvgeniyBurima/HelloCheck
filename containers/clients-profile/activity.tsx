@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionHeader from '../../components/section-header/section-header';
 import Button from '../../components/button/button';
-import Activity from './tabs/activity';
+import ActivityTab from './tabs/activity';
 import InvoiceTable from './invoice-table/table';
 
 function Activity() {
@@ -12,7 +12,7 @@ function Activity() {
         right={<Button text="new" icon="plus" color="white" />}
         className="mb-4"
       />
-      <Activity />
+      <ActivityTab />
       <InvoiceTable />
     </div>
   );

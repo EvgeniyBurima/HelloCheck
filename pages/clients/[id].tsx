@@ -36,8 +36,8 @@ function ClientProfile(): JSX.Element {
           <DetailsSection />
           <ActionsSection className="mt-6" />
         </div>
-        {/*<Activity />*/}
-        <PropertiesJobs />
+        <Activity />
+        {/*<PropertiesJobs />*/}
       </MainSection>
       <Footer />
     </>

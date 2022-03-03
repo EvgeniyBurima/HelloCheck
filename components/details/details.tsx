@@ -30,6 +30,8 @@ function Details({ header, children, gradient = false, className = '' }: Props) 
         className={`flex items-center ${gradient ? 'bg-clip-text text-transparent bg-gradient-default from-blue-500 to-violet-500' : ''} font-medium mb-2`}
         onClick={() => setExpanded(!expanded)}
         aria-expanded="false"
+        role="button"
+        tabIndex={0}
       >
         {getIcon(gradient, expanded)}
         <span className="ml-3">{header}</span>
