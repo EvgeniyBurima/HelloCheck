@@ -9,7 +9,7 @@ interface Props {
 function MainLayout({ children, className = '' }: Props) {
   return (
     <>
-      <div className={`${className} w-full h-full p-4 md:px-14 md:py-6 bg-white flex flex-col items-center text-sm`}>
+      <div className={`${className} w-full h-full px-4 md:px-12 py-6 md:py-6 bg-white flex flex-col items-center text-sm md:mt-[1px]`}>
         {children}
       </div>
       <Footer />

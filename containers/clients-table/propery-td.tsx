@@ -10,8 +10,8 @@ interface Props {
 function ProperyTd({ value, className }: Props) {
   return (
     <Td className={className}>
-      <div className="flex space-x-[10px]">
-        <UilLocationPoint size="16" />
+      <div>
+        <UilLocationPoint size="16" className="inline mr-2" />
         <span>{ value }</span>
       </div>
     </Td>

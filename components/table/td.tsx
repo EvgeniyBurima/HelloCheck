@@ -7,7 +7,7 @@ interface Props{
 
 function Td({ children, className }: Props) {
   return (
-    <td className={`p-2 ${className || ''}`}>
+    <td className={`text-meta leading-[29px] py-2 px-2 ${className || ''}`}>
       { children }
     </td>
   );

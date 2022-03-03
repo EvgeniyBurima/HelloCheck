@@ -5,7 +5,7 @@ import InactiveTab from '../../../components/tab/inactive-tab';
 
 function ClientsTab() {
   return (
-    <TabContainer>
+    <TabContainer xpadding={false} className="pl-2">
       <ActiveTab name="Active" />
       <InactiveTab name="Archived" />
       <InactiveTab name="All Clients" />

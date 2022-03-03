@@ -6,7 +6,7 @@ interface Props {
 }
 
 function InactiveTab({ name, className }: Props) {
-  return <span className={className || ''}>{ name }</span>;
+  return <span className={`pt-1 ${className || ''}`}>{ name }</span>;
 }
 
 export default InactiveTab;

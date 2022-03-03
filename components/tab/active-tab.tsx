@@ -9,7 +9,7 @@ function ActiveTab({ name }: Props) {
   return (
     <InactiveTab
       name={name}
-      className="text-steel-800 border-b-[1px] border-steel-800 pb-1"
+      className="text-steel-800 border-b-[1px] border-steel-800 pb-1 md:pb-1.5"
     />
   );
 }

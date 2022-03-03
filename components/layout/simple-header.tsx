@@ -10,7 +10,7 @@ function SimpleHeader({ children }: Props) {
     <>
       <Header />
 
-      <main className="row-auto border-t border-background flex flex-col justify-center items-center mt-[1px]">
+      <main className="row-auto border-t border-background flex flex-col justify-center items-center md:mt-[1px]">
         { children }
       </main>
     </>

@@ -23,13 +23,13 @@ function LoginGroup({ openMenu, setOpenMenu }: Props) {
         </Link>
       </div>
       <SearchBar />
-      <div className="flex items-center space-x-2 flex-nowrap justify-end">
+      <div className="flex items-center md:space-x-2 flex-nowrap justify-end">
 
         <div className=" hidden md:block w-[1px] h-4 items-center bg-steel-100" />
 
         <Button icon="chevron" text="add new" color="blue" />
         <Button icon="chevron" text="account" color="white" className="hidden md:flex" />
-        <BurgerMenu open={openMenu} setOpen={setOpenMenu} className="block md:hidden" />
+        <BurgerMenu open={openMenu} setOpen={setOpenMenu} className="ml-4 block md:hidden" />
       </div>
 
     </div>
