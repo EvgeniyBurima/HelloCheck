@@ -6,7 +6,7 @@ interface Props {
 
 function BurgerMenu({ open, setOpen, className }: Props): JSX.Element {
   return (
-    <div className={`flex flex-col justify-center ${className}`}>
+    <div className={`flex flex-col justify-center ${className || ''}`}>
       <div className="relative py-3 sm:max-w-xl mx-auto">
         <nav x-data="{ open: false }">
           <button className="text-gray-500 w-10 h-10 relative focus:outline-none bg-white" onClick={() => setOpen(!open)} type="button">

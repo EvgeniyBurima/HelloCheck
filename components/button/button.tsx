@@ -4,11 +4,13 @@ import {
   UilArchive,
   UilTrashAlt,
   UilCornerUpLeftAlt,
+  UilArrowLeft,
+  UilArrowDown,
   // @ts-ignore
 } from '@iconscout/react-unicons';
 
 type ButtonColor = 'gradient' | 'blue' | 'white';
-type IconType = 'chevron' | 'plus' | 'archive' | 'delete' | 'back';
+type IconType = 'chevron' | 'plus' | 'archive' | 'delete' | 'back' | 'back-alt' | 'down';
 type IconColor = 'red';
 
 interface Props {
@@ -59,7 +61,13 @@ const getIcon = (iconName: IconType, iconColor: IconColor | undefined): JSX.Elem
       Icon = UilTrashAlt;
       break;
     case 'back':
+      Icon = UilArrowLeft;
+      break;
+    case 'back-alt':
       Icon = UilCornerUpLeftAlt;
+      break;
+    case 'down':
+      Icon = UilArrowDown;
       break;
     default: Icon = UilAngleDown;
   }
@@ -74,11 +82,11 @@ function Button({
   iconColor,
 }: Props): JSX.Element {
   const { backGround, fontColor } = getColor(color);
-  const classNames = `capitalize rounded-lg px-3 py-1 shadow-button font-normal hover:shadow-button-hover ${backGround} ${fontColor} ${className}`;
+  const classNames = `capitalize rounded-lg shadow-button font-normal hover:shadow-button-hover ${backGround} ${fontColor} ${className || ''}`;
   return (
     <button
       type="button"
-      className={`${classNames} items-center text-center flex py-1 px-0 whitespace-nowrap`}
+      className={`items-center text-center flex py-1 px-0 whitespace-nowrap ${classNames}`}
     >
       {
         icon

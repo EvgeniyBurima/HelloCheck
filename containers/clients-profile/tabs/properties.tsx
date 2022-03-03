@@ -3,14 +3,14 @@ import TabContainer from '../../../components/tab/tab-container';
 import ActiveTab from '../../../components/tab/active-tab';
 import InactiveTab from '../../../components/tab/inactive-tab';
 
-function ClientsTab() {
+function PropertyTab() {
   return (
-    <TabContainer top={false}>
-      <ActiveTab name="Overview" />
-      <InactiveTab name="Properties & Jobs" />
-      <InactiveTab name="Notes" />
+    <TabContainer top={false} xpadding={false}>
+      <ActiveTab name="All Properties" />
+      <InactiveTab name="Active" />
+      <InactiveTab name="Archived" />
     </TabContainer>
   );
 }
 
-export default ClientsTab;
+export default PropertyTab;

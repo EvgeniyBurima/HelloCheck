@@ -36,7 +36,7 @@ function LinkButton({
   href,
 }: IProps): JSX.Element {
   const { backGround, fontColor } = getColor(color);
-  const classNames = `capitalize rounded-lg px-3 py-1 shadow-button font-normal hover:shadow-button-hover ${backGround} ${fontColor} ${className}`;
+  const classNames = `capitalize rounded-lg px-3 py-1 shadow-button font-normal hover:shadow-button-hover ${backGround} ${fontColor} ${className || ''}`;
   return (
     <Link href={href} passHref>
       <a

@@ -8,7 +8,7 @@ interface MobileMenuProps {
 
 function MobileMenu({ children, show, className }: MobileMenuProps): JSX.Element {
   return (
-    <div className={`${show ? '' : 'hidden'} ${className} relative p-6 bg-white transition-transform`}>
+    <div className={`${show ? '' : 'hidden'} ${className || ''} relative p-6 bg-white transition-transform`}>
       {children}
     </div>
   );

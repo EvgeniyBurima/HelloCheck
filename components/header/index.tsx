@@ -5,20 +5,18 @@ import MobileMenu from './mobile-menu';
 import LoginGroup from './login/login-group';
 import MainGroup from './main/main-group';
 import LoginMobileMenu from './login/login-mobile-menu';
-import { HeaderType } from '../../hooks/useHeaderType';
+import useHeadeType from '../../hooks/useHeaderType';
 
-interface Props {
-  headerType: HeaderType,
-}
-
-function Header({ headerType }: Props): JSX.Element {
+function Header(): JSX.Element {
   const [openMenu, setOpenMenu] = useState(false);
+
+  const headerType = useHeadeType();
 
   return (
     <>
       <header className="row-auto h-14 flex items-center justify-between px-4 md:px-12 py-4 bg-white text-sm">
         <Link href="/">
-          <a className="inline-flex items-center p-2 mr-4">
+          <a className="inline-flex items-center mr-4">
             <CheckLogoText className="h-6 w-auto cursor-pointer" />
           </a>
         </Link>

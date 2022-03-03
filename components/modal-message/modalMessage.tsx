@@ -48,7 +48,7 @@ const getIcon = (icon: Icon, color: Color): JSX.Element => {
     default: Component = UilExclamationTriangle;
   }
   return (
-    <div className="modal__sign pr-2">
+    <div className="pr-2">
       <Component
         className="w-[15px] h-[15px]"
         color={color === 'white' ? 'white' : colors[color][500]}
@@ -57,20 +57,20 @@ const getIcon = (icon: Icon, color: Color): JSX.Element => {
   );
 };
 
-function Index({
+function ModalMessage({
   text,
   color = 'white',
   icon = null,
   className = '',
 }: IModalMessage): JSX.Element {
   return (
-    <div className={`rounded text-steel-500 flex px-4 py-2 ${getBgColorClass(color)} ${className}`}>
+    <div className={`rounded text-steel-500 flex px-4 py-2 ${getBgColorClass(color)} ${className || ''}`}>
       { icon && getIcon(icon, color) }
-      <div className="modal__text text-xs">
+      <div className="text-modal">
         { text }
       </div>
     </div>
   );
 }
 
-export default Index;
+export default ModalMessage;

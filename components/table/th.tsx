@@ -9,8 +9,8 @@ interface Props{
 
 function Th({ text, arrows, className }: Props) {
   return (
-    <th className={`p-2 text-left ${className || ''}`}>
-      { text }
+    <th className={`p-2 text-left ${className || ''} whitespace-nowrap`}>
+      <span className={arrows ? 'mr-4' : ''}>{ text }</span>
       { arrows && <UpDownArrows />}
     </th>
   );

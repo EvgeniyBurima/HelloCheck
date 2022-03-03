@@ -1,7 +1,7 @@
 import React from 'react';
 import { capitalize } from '../../helpers/string';
 
-type Color = 'red' | 'yellow' | 'green' | 'blue' | 'gray';
+export type Color = 'red' | 'yellow' | 'green' | 'blue' | 'gray';
 type Size = 'small' | 'large';
 type Shade = 'dark' | 'light';
 type LabelColors = keyof typeof bgColors;

@@ -1,19 +1,46 @@
 import React from 'react';
-import Button from '../../components/button/button';
-import MainLayout from '../../components/layout/main';
-import ClientsTable from '../../containers/clients-table/clients-table';
 import ProfileTab from '../../containers/clients/tab/profile-tab';
+import AdditionalHeader from '../../components/layout/additional-header';
+import MainSection from '../../components/layout/main-section';
+import ClientInfo from '../../components/client-info';
+import Footer from '../../components/footer';
+import ProInsights from '../../containers/clients-profile/pro-insights';
+import Preferences from '../../containers/clients-profile/preferences';
+import DetailsSection from '../../containers/clients-profile/details';
+import ActionsSection from '../../containers/clients-profile/action-section';
+import Activity from '../../containers/clients-profile/activity';
+import PropertiesJobs from '../../containers/clients-profile/properties-jobs';
 
 function ClientProfile(): JSX.Element {
   return (
-    <MainLayout>
-      <ProfileTab />
-      <div className="flex justify-between w-full px-2">
-        <h2 className="text-3xl font-medium text-steel-800">Clients</h2>
-        <Button text="new" icon="plus" color="white" />
-      </div>
-      <ClientsTable />
-    </MainLayout>
+    <>
+      <AdditionalHeader>
+        <ClientInfo
+          id={12050}
+          name="Beth Johnson"
+          balance={300.00}
+          className="block md:hidden"
+        />
+        <ProfileTab />
+      </AdditionalHeader>
+      <MainSection direction="row">
+        <div className="hidden md:flex flex-col min-w-[350px] mr-12 ">
+          <ClientInfo
+            id={12050}
+            name="Beth Johnson"
+            balance={300.00}
+            className="hidden md:block"
+          />
+          <ProInsights />
+          <Preferences />
+          <DetailsSection />
+          <ActionsSection className="mt-6" />
+        </div>
+        {/*<Activity />*/}
+        <PropertiesJobs />
+      </MainSection>
+      <Footer />
+    </>
   );
 }
 

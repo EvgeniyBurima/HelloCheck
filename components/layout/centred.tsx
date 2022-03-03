@@ -8,7 +8,7 @@ interface CentredLayoutProps {
 
 function CentredLayout({ children, className = '' }: CentredLayoutProps) {
   return (
-    <div className={`${className} p-4 md:p-0 bg-white flex flex-col justify-center items-center`}>
+    <div className={`${className || ''} p-4 md:p-0 bg-white flex flex-col justify-center items-center`}>
       {children}
     </div>
   );

@@ -3,6 +3,7 @@ module.exports = {
     content: [
         "./pages/**/*.{js,ts,jsx,tsx}",
         "./components/**/*.{js,ts,jsx,tsx}",
+        "./containers/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
         extend:{
@@ -53,11 +54,53 @@ module.exports = {
                 },
                 violet: {
                     500: '#972EEA',
-                }
+                },
+                subtitle: {
+                    'white-10': 'rgba(255, 255, 255, 0.1)',
+                },
             },
             fontSize: {
-                'label-small': '10px',
-                'label-large': '14px',
+                meta: [
+                    '14px',
+                    {
+                        lineHeight: '150%',
+                    }
+                ],
+                modal: [
+                    '12px',
+                    {
+                        lineHeight: '18px',
+                        letterSpacing: '0.9px',
+                    }
+                ],
+                base: '14px',
+                md: '16px',
+                h3: [
+                    '32px',
+                    {
+                        lineHeight: '120%',
+                        letterSpacing: '-0.03em',
+                    }
+                ],
+                h5: [
+                    '20px',
+                    {
+                        lineHeight: '24px',
+                        letterSpacing: '-0.03em'
+                    }
+                ],
+                'label-small': [
+                    '10px',
+                    {
+                        lineHeight: '12px',
+                    }
+                ],
+                'label-large': [
+                    '14px',
+                    {
+                        lineHeight: '21px',
+                    }
+                ],
                 'xxs': '10px'
             },
             fontFamily: {

@@ -1,7 +1,8 @@
 import React, { ReactNode } from 'react';
 
-interface ICard {
+interface Props {
   children: ReactNode,
+  className?: string;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -17,7 +18,7 @@ function Footer(props: any): JSX.Element | null {
   return null;
 }
 
-function Card({ children }: ICard): JSX.Element {
+function Card({ children, className }: Props): JSX.Element {
   const checkType = (cardPart: 'Header' | 'Body' | 'Footer') => (child: ReactNode) => {
     if (!child) return false;
     if (typeof child === 'object' && 'type' in child) {
@@ -45,11 +46,11 @@ function Card({ children }: ICard): JSX.Element {
   const footer = childrenArray.find(footerChecker);
 
   return (
-    <div className="bg-steel-50 shadow-button rounded-lg max-w-[480px]">
+    <div className={`bg-steel-50 shadow-button rounded-lg max-w-[480px] ${className}`}>
       { head ? getChildren(head) : '' }
       { body ? getChildren(body) : ''}
       { footer
-        ? <div className="px-6 py-4 md:py-8 bg-white mt-[2px]">{getChildren(footer)}</div>
+        ? <div className="px-6 py-4 bg-white mt-[2px]">{getChildren(footer)}</div>
         : '' }
     </div>
   );

@@ -2,11 +2,12 @@ import { ReactNode } from 'react';
 
 interface Props{
   children: ReactNode,
+  className?: string,
 }
 
-function Tr({ children }: Props) {
+function Tr({ children, className }: Props) {
   return (
-    <tr className="border-background border-y-[1px]">
+    <tr className={`border-background border-y-[1px] ${className || ''}`}>
       { children }
     </tr>
   );
