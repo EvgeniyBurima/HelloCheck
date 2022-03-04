@@ -10,7 +10,7 @@ function DetailGroup({ children, gradient = false, className = '' }: Props) {
   const lastEl = React.Children.count(children) - 1;
 
   return (
-    <div className={`shadow-button ${gradient ? 'bg-gradient-default from-blue-500 to-violet-500 rounded-lg' : ''} ${className}`} role="group">
+    <div className={`shadow-button ${gradient ? 'space-y-[2px] bg-gradient-default from-blue-500 to-violet-500 rounded-lg' : ''} ${className}`} role="group">
       {React.Children.map(children, (child: ReactElement, index) => {
         if (index === 0) {
           return React.cloneElement(child, { ...child.props, className: `rounded-t-lg border border-t-0 border-r-0 border-l-0 ${gradient ? 'border-subtitle-white-10' : 'border-0'}` });

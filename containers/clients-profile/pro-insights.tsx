@@ -11,18 +11,18 @@ function ProInsights() {
       header="Pro Insights"
       gradient
     >
-      <DetailsGroup gradient className="text-white">
+      <DetailsGroup gradient className="text-white mt-[-1px]">
         <DetailRow
           icon="repeat"
           text="MRR"
-          value={<MoneySpan value={300} />}
+          value={<MoneySpan value={220} />}
           ghost
           shadow={false}
         />
         <DetailRow
           icon="analysis"
           text="Total Earned"
-          value={<MoneySpan value={300} />}
+          value={<MoneySpan value={1980} />}
           ghost
           shadow={false}
         />

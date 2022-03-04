@@ -5,6 +5,7 @@ type Type = 'paid' | 'sent' | 'partial';
 
 interface Props {
   type: Type,
+  className?: string,
 }
 
 const getColor = (type: Type) => {
@@ -26,11 +27,12 @@ const getColor = (type: Type) => {
   return color as Color;
 };
 
-function StatusLabel({ type }: Props) {
+function StatusLabel({ type, className = '' }: Props) {
   return (
     <Label
       text={capitalize(type)}
       color={getColor(type)}
+      className="className"
     />
 
   );

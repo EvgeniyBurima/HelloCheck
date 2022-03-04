@@ -19,7 +19,7 @@ function DetailsSection() {
         />
         <DetailRow
           icon="phone"
-          text="Name"
+          text="Phone"
           value={<AngleSpan value="(890) 123-4567" />}
           shadow={false}
         />

@@ -9,7 +9,9 @@ function AdditionalHeader({ children }: Props) {
   return (
     <>
       <Header />
-      {children}
+      <div className="md:pt-[9px] bg-white">
+        {children}
+      </div>
     </>
   );
 }

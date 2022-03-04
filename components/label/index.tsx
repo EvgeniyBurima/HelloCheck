@@ -12,6 +12,7 @@ interface Props {
   size?: Size,
   disabled?: boolean,
   shade?: Shade,
+  className?: string,
 }
 
 const bgColors = {
@@ -48,9 +49,10 @@ function Label({
   color = 'gray',
   disabled = false,
   shade = 'light',
+  className = '',
 }: Props) {
   return (
-    <span className={`${getColor(color, disabled, shade)} ${size === 'small' ? 'h-4 text-xxs text-label-small' : 'h-[21px] text-label-large'} py-0.5 px-2  rounded`}>
+    <span className={`${getColor(color, disabled, shade)} ${size === 'small' ? 'h-4 text-xxs text-label-small' : 'h-[21px] text-label-large'} py-0.5 px-2  rounded ${className}`}>
       {text}
     </span>
   );

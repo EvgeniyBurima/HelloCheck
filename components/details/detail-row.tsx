@@ -57,7 +57,7 @@ const getIcon = (icon: Icon, iconColor = '') => {
       break;
     default: IconElement = UilRepeat;
   }
-  return <IconElement size="16" className={`mr-3 ${iconColor}`} />;
+  return <IconElement size="16" className={`mr-2 ${iconColor}`} />;
 };
 
 function DetailRow({
