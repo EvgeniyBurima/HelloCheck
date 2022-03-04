@@ -5,11 +5,16 @@ import DetailRow from '../../components/details/detail-row';
 import MoneySpan from '../../components/span/money-span';
 import DateSpan from '../../components/span/date-span';
 
-function ProInsights() {
+interface Props {
+  className?: string,
+}
+
+function ProInsights({ className = '' }: Props) {
   return (
     <Details
       header="Pro Insights"
       gradient
+      className={className}
     >
       <DetailsGroup gradient className="text-white mt-[-1px]">
         <DetailRow

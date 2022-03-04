@@ -1,15 +1,16 @@
 import Td from './td';
-import Button from '../button/button';
+import Button, { IconColor } from '../button/button';
 import ButtonGroup from '../button-group/buttonGroup';
 
-type LeftButtonType = 'archive' | 'back' | 'down';
+type LeftButtonType = 'archive' | 'back' | 'down' | 'pause' | 'play';
 
 interface Props {
-  className?: string,
   leftButtonType: LeftButtonType,
+  className?: string,
+  leftButtonColor?: IconColor,
 }
 
-function ControlTd({ leftButtonType, className }: Props) {
+function ControlTd({ leftButtonType, className = '', leftButtonColor }: Props) {
   return (
     <Td>
       <div className={`flex space-x-[9px] justify-end ${className}`}>
@@ -18,6 +19,7 @@ function ControlTd({ leftButtonType, className }: Props) {
             color="white"
             text=""
             icon={leftButtonType}
+            iconColor={leftButtonColor}
           />
           <Button
             color="white"

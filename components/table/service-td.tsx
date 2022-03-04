@@ -1,6 +1,6 @@
 // @ts-ignore
 import { UilCreateDashboard } from '@iconscout/react-unicons';
-import Td from '../../../components/table/td';
+import Td from './td';
 
 interface Props {
   text: string,

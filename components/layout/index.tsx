@@ -7,7 +7,7 @@ interface Props {
 
 function Layout({ children }: Props): JSX.Element {
   return (
-    <div className="h-screen bg-background flex flex-col text-base">
+    <div className="min-h-full flex flex-col text-base">
       <Head>
         <title>Check</title>
         <link rel="icon" href="/favicon.ico" />

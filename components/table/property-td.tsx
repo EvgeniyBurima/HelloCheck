@@ -1,9 +1,10 @@
 // @ts-ignore
 import { UilEstate } from '@iconscout/react-unicons';
-import Td from '../../../components/table/td';
+import { ReactNode } from 'react';
+import Td from './td';
 
 interface Props {
-  text: string,
+  text: string | ReactNode,
   className?: string,
 }
 

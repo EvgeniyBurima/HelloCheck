@@ -4,11 +4,15 @@ import DetailsGroup from '../../components/details/details-group';
 import DetailRow from '../../components/details/detail-row';
 import AngleSpan from '../../components/span/angle-span';
 
-function Preferences() {
+interface Props {
+  className?: string;
+}
+
+function Preferences({ className }: Props) {
   return (
     <Details
       header="Preferences"
-      className="text-steel-800"
+      className={`text-steel-800 ${className}`}
     >
       <DetailsGroup>
         <DetailRow

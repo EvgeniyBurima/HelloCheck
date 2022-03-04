@@ -1,21 +1,21 @@
 // @ts-ignore
 import { UilLocationPoint } from '@iconscout/react-unicons';
-import Td from '../../components/table/td';
+import Td from './td';
 
 interface Props {
-  value: string,
+  text: string,
   className?: string,
 }
 
-function ProperyTd({ value, className }: Props) {
+function PropertyLocationTd({ text, className }: Props) {
   return (
     <Td className={className}>
       <div>
         <UilLocationPoint size="16" className="inline mr-2" />
-        <span>{ value }</span>
+        <span>{ text }</span>
       </div>
     </Td>
   );
 }
 
-export default ProperyTd;
+export default PropertyLocationTd;

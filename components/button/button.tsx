@@ -6,12 +6,14 @@ import {
   UilCornerUpLeftAlt,
   UilArrowLeft,
   UilArrowDown,
+  UilPauseCircle,
+  UilPlayCircle ,
   // @ts-ignore
 } from '@iconscout/react-unicons';
 
 type ButtonColor = 'gradient' | 'blue' | 'white';
-type IconType = 'chevron' | 'plus' | 'archive' | 'delete' | 'back' | 'back-alt' | 'down';
-type IconColor = 'red';
+type IconType = 'chevron' | 'plus' | 'archive' | 'delete' | 'back' | 'back-alt' | 'down' | 'pause' | 'play';
+export type IconColor = keyof typeof iconColors;
 
 interface Props {
   text?: string,
@@ -28,6 +30,7 @@ interface IGetColor {
 
 const iconColors = {
   red: 'text-red-500',
+  green: 'text-green-500',
 };
 
 const getColor = (color: ButtonColor): IGetColor => {
@@ -68,6 +71,12 @@ const getIcon = (iconName: IconType, iconColor: IconColor | undefined): JSX.Elem
       break;
     case 'down':
       Icon = UilArrowDown;
+      break;
+    case 'pause':
+      Icon = UilPauseCircle;
+      break;
+    case 'play':
+      Icon = UilPlayCircle;
       break;
     default: Icon = UilAngleDown;
   }

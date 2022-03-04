@@ -6,7 +6,7 @@ import InvoiceTable from './invoice-table/table';
 
 function Activity() {
   return (
-    <div className="w-full">
+    <div className="w-full mt-2 md:mt-0">
       <SectionHeader
         name="Activity"
         right={<Button text="new" icon="plus" color="white" />}

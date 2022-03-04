@@ -20,7 +20,7 @@ function ClientInfo({
   className,
 }: Props) {
   return (
-    <div className={`w-full mt-[1px] p-4 md:p-0 ${className || ''}`}>
+    <div className={`bg-steel-50 md:bg-white w-full mt-[1px] p-4 md:p-0 ${className || ''}`}>
       <div className="flex w-full justify-between items-center">
         <div className="flex">
           <Button icon="back" color="white" className="mr-4 p-4" />
@@ -30,9 +30,9 @@ function ClientInfo({
         </div>
         <Label text={`ID: ${id || 12050}`} color="gray" disabled className="uppercase tracking-widest" />
       </div>
-      <GroupItem className="rounded mt-5">
+      <GroupItem className="rounded mt-5 py-1.5">
         <GroupItem.Left>
-          <div className="flex items-center">
+          <div className="flex">
             <UilDollarAlt size="16" className="mr-2" />
             <span className="text-meta">Current Balance</span>
           </div>

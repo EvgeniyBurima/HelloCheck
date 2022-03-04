@@ -3,7 +3,7 @@ import Tr from '../../components/table/tr';
 import Th from '../../components/table/th';
 import Td from '../../components/table/td';
 import DateTd from '../../components/table/date-td';
-import ProperyTd from './propery-td';
+import PropertyLocationTd from '../../components/table/property-location-td';
 import EarnedTd from './earned-td';
 import ControlTd from '../../components/table/control-td';
 import MoneySpan from '../../components/span/money-span';
@@ -26,7 +26,7 @@ function ClientsTable() {
           <Td className="">Alan Peters</Td>
           <Td><MoneySpan value={0.00} /></Td>
           <DateTd unixTime="1645793504" className="hidden md:table-cell" />
-          <ProperyTd value="2 Properties" className="hidden md:table-cell" />
+          <PropertyLocationTd text="2 Properties" className="hidden md:table-cell" />
           <EarnedTd value="1980.00" className="hidden md:table-cell" />
           <ControlTd leftButtonType="archive" />
         </Tr>
@@ -34,7 +34,7 @@ function ClientsTable() {
           <Td className="">Alan Peters</Td>
           <Td><MoneySpan value={60.00} /></Td>
           <DateTd unixTime="1645793504" className="hidden md:table-cell" />
-          <ProperyTd value="2 Properties" className="hidden md:table-cell" />
+          <PropertyLocationTd text="2 Properties" className="hidden md:table-cell" />
           <EarnedTd value="1980.00" className="hidden md:table-cell" />
           <ControlTd leftButtonType="archive" />
         </Tr>
@@ -42,7 +42,7 @@ function ClientsTable() {
           <Td className="">Alan Peters</Td>
           <Td><MoneySpan value={150.00} /></Td>
           <DateTd unixTime="1645793504" className="hidden md:table-cell" />
-          <ProperyTd value="2 Properties" className="hidden md:table-cell" />
+          <PropertyLocationTd text="2 Properties" className="hidden md:table-cell" />
           <EarnedTd value="1980.00" className="hidden md:table-cell" />
           <ControlTd leftButtonType="archive" />
         </Tr>
@@ -50,7 +50,7 @@ function ClientsTable() {
           <Td className="">Alan Peters</Td>
           <Td><MoneySpan value={150.00} /></Td>
           <DateTd unixTime="1645793504" className="hidden md:table-cell" />
-          <ProperyTd value="2 Properties" className="hidden md:table-cell" />
+          <PropertyLocationTd text="2 Properties" className="hidden md:table-cell" />
           <EarnedTd value="1980.00" className="hidden md:table-cell" />
           <ControlTd leftButtonType="archive" />
         </Tr>
@@ -58,7 +58,7 @@ function ClientsTable() {
           <Td className="">Alan Peters</Td>
           <Td><MoneySpan value={150.00} /></Td>
           <DateTd unixTime="1645793504" className="hidden md:table-cell" />
-          <ProperyTd value="2 Properties" className="hidden md:table-cell" />
+          <PropertyLocationTd text="2 Properties" className="hidden md:table-cell" />
           <EarnedTd value="1980.00" className="hidden md:table-cell" />
           <ControlTd leftButtonType="archive" />
         </Tr>
@@ -66,7 +66,7 @@ function ClientsTable() {
           <Td className="">Alan Peters</Td>
           <Td><MoneySpan value={150.00} /></Td>
           <DateTd unixTime="1645793504" className="hidden md:table-cell" />
-          <ProperyTd value="2 Properties" className="hidden md:table-cell" />
+          <PropertyLocationTd text="2 Properties" className="hidden md:table-cell" />
           <EarnedTd value="1980.00" className="hidden md:table-cell" />
           <ControlTd leftButtonType="archive" />
         </Tr>
@@ -74,7 +74,7 @@ function ClientsTable() {
           <Td className="">Alan Peters</Td>
           <Td><MoneySpan value={150.00} /></Td>
           <DateTd unixTime="1645793504" className="hidden md:table-cell" />
-          <ProperyTd value="2 Properties" className="hidden md:table-cell" />
+          <PropertyLocationTd text="2 Properties" className="hidden md:table-cell" />
           <EarnedTd value="1980.00" className="hidden md:table-cell" />
           <ControlTd leftButtonType="archive" />
         </Tr>
@@ -82,7 +82,7 @@ function ClientsTable() {
           <Td className="">Alan Peters</Td>
           <Td><MoneySpan value={150.00} /></Td>
           <DateTd unixTime="1645793504" className="hidden md:table-cell" />
-          <ProperyTd value="2 Properties" className="hidden md:table-cell" />
+          <PropertyLocationTd text="2 Properties" className="hidden md:table-cell" />
           <EarnedTd value="1980.00" className="hidden md:table-cell" />
           <ControlTd leftButtonType="archive" />
         </Tr>
@@ -90,7 +90,7 @@ function ClientsTable() {
           <Td className="">Alan Peters</Td>
           <Td><MoneySpan value={150.00} /></Td>
           <DateTd unixTime="1645793504" className="hidden md:table-cell" />
-          <ProperyTd value="2 Properties" className="hidden md:table-cell" />
+          <PropertyLocationTd text="2 Properties" className="hidden md:table-cell" />
           <EarnedTd value="1980.00" className="hidden md:table-cell" />
           <ControlTd leftButtonType="archive" />
         </Tr>
@@ -98,7 +98,7 @@ function ClientsTable() {
           <Td className="">Alan Peters</Td>
           <Td><MoneySpan value={150.00} /></Td>
           <DateTd unixTime="1645793504" className="hidden md:table-cell" />
-          <ProperyTd value="2 Properties" className="hidden md:table-cell" />
+          <PropertyLocationTd text="2 Properties" className="hidden md:table-cell" />
           <EarnedTd value="1980.00" className="hidden md:table-cell" />
           <ControlTd leftButtonType="archive" />
         </Tr>
@@ -106,7 +106,7 @@ function ClientsTable() {
           <Td className="">Alan Peters</Td>
           <Td><MoneySpan value={150.00} /></Td>
           <DateTd unixTime="1645793504" className="hidden md:table-cell" />
-          <ProperyTd value="2 Properties" className="hidden md:table-cell" />
+          <PropertyLocationTd text="2 Properties" className="hidden md:table-cell" />
           <EarnedTd value="1980.00" className="hidden md:table-cell" />
           <ControlTd leftButtonType="archive" />
         </Tr>
@@ -114,7 +114,7 @@ function ClientsTable() {
           <Td className="">Alan Peters</Td>
           <Td><MoneySpan value={150.00} /></Td>
           <DateTd unixTime="1645793504" className="hidden md:table-cell" />
-          <ProperyTd value="2 Properties" className="hidden md:table-cell" />
+          <PropertyLocationTd text="2 Properties" className="hidden md:table-cell" />
           <EarnedTd value="1980.00" className="hidden md:table-cell" />
           <ControlTd leftButtonType="archive" />
         </Tr>

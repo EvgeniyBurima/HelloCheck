@@ -13,7 +13,7 @@ function MoneySpan({
   position = 'left',
 }: Props) {
   return (
-    <span className={`flex ${position === 'left' ? 'justify-start' : 'justify-end pr-2'} ${className}`}>{currencyFormatter(value)}</span>
+    <div className={`${position === 'left' ? '' : 'text-right pr-2'} ${className}`}>{currencyFormatter(value)}</div>
   );
 }
 

@@ -2,7 +2,6 @@ import React from 'react';
 import {
   UilAnalysis,
   UilCalendarAlt,
-  UilRepeat,
   UilEnvelope,
   UilTelegramAlt,
   UilUserCircle,
@@ -11,6 +10,7 @@ import {
   UilArchive,
 // @ts-ignore
 } from '@iconscout/react-unicons';
+import Repeat from '../svg/repeat';
 import GroupItem from '../group-item';
 
 type Icon = 'repeat' | 'analysis' | 'calendar' | 'envelope' | 'telegram' | 'user-circle' | 'phone' | 'archive' | 'trash';
@@ -32,7 +32,7 @@ const getIcon = (icon: Icon, iconColor = '') => {
       IconElement = UilAnalysis;
       break;
     case 'repeat':
-      IconElement = UilRepeat;
+      IconElement = Repeat;
       break;
     case 'calendar':
       IconElement = UilCalendarAlt;
@@ -55,7 +55,7 @@ const getIcon = (icon: Icon, iconColor = '') => {
     case 'archive':
       IconElement = UilArchive;
       break;
-    default: IconElement = UilRepeat;
+    default: IconElement = Repeat;
   }
   return <IconElement size="16" className={`mr-2 ${iconColor}`} />;
 };

@@ -4,11 +4,15 @@ import DetailsGroup from '../../components/details/details-group';
 import DetailRow from '../../components/details/detail-row';
 import AngleSpan from '../../components/span/angle-span';
 
-function DetailsSection() {
+interface Props {
+  className?: string,
+}
+
+function DetailsSection({ className }: Props) {
   return (
     <Details
       header="Details"
-      className="text-steel-800"
+      className={`text-steel-800 ${className}`}
     >
       <DetailsGroup>
         <DetailRow
